@@ -31,6 +31,130 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
         <meta name="theme-color" content="#000000">
+
+<style>
+.ministry-card{
+  transition: transform .3s, box-shadow .3s;
+  cursor:pointer;
+  padding:20px;
+  border-radius:12px;
+  background:#111;
+}
+.ministry-card:hover{
+  transform: scale(1.05);
+  box-shadow:0 0 20px #0f0;
+}
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:9999;
+}
+.modal.open{
+  opacity:1; visibility:visible;
+}
+.modal-content{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:16px;
+  max-width:400px;
+  color:#fff;
+  box-shadow:0 0 25px #0f0;
+}
+</style>
+
+
+<!-- HR MINISTRIES STYLES -->
+<style>
+.hr-ministries-grid { /* spacing already from tailwind grid, extra styles below */ }
+.hr-ministry-card{
+  background:var(--background-dark);
+  padding:14px;
+  border-radius:12px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-start;
+  cursor:pointer;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+  border:1px solid rgba(255,255,255,0.04);
+}
+.hr-ministry-card span.material-symbols-outlined { font-size:28px; }
+.hr-ministry-card:hover{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,200,120,0.12);
+  border-color: rgba(0,200,100,0.28);
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.06));
+}
+/* Modal styles (namespace hr-) */
+.hr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .22s ease, visibility .22s ease;
+  z-index: 99999;
+}
+.hr-modal.open { opacity: 1; visibility: visible; }
+.hr-modal .hr-modal-box {
+  width: 92%;
+  max-width: 860px;
+  background: linear-gradient(180deg,#0f1724,#071018);
+  border-radius: 12px;
+  padding: 18px;
+  color: #e6eef5;
+  box-shadow: 0 20px 60px rgba(2, 62, 46, 0.5);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.hr-modal .hr-head { display:flex; gap:16px; align-items:center; }
+.hr-modal .hr-photo { width:120px; height:120px; border-radius:999px; object-fit:cover; border:4px solid rgba(255,255,255,0.04); }
+.hr-modal h3 { margin:0; color:var(--primary-color); }
+.hr-modal .hr-meta { color:var(--text-dark); margin-top:6px; font-size:0.95rem; }
+.hr-modal .hr-field { margin:10px 0; display:flex; gap:12px; align-items:flex-start; }
+.hr-modal .hr-label { width:140px; font-weight:700; color:#cfeee0; }
+.hr-modal .hr-value { flex:1; color:#d8eede; }
+.hr-modal .hr-actions { margin-top:14px; display:flex; gap:10px; justify-content:flex-end; }
+.hr-btn-wa { background: linear-gradient(90deg,#25D366,#128C7E); color:white; border:none; padding:8px 12px; border-radius:10px; font-weight:700; text-decoration:none; }
+.hr-close-btn { position:absolute; right:12px; top:10px; background:transparent; border:none; font-size:28px; color:#fff; cursor:pointer; }
+@media (max-width:640px){
+  .hr-modal .hr-head { flex-direction:column; text-align:center; }
+  .hr-modal .hr-label { width:100%; }
+}
+</style>
+<!-- END HR MINISTRIES STYLES -->
+
+
+<style>
+/* Modal slide animation */
+@keyframes hrModalSlide {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.hr-modal.open .hr-modal-box {
+  animation: hrModalSlide .35s ease-out;
+}
+
+/* Icon pulse animation */
+@keyframes hrPulse {
+  0% { transform: scale(1); opacity: .9; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: .9; }
+}
+.hr-ministry-card:hover .material-symbols-outlined {
+  animation: hrPulse 0.6s ease-in-out;
+}
+</style>
+
 </head>  
     <style type="text/tailwindcss">
         :root {
@@ -716,6 +840,66 @@
         });
     </script>
     
+
+<style>
+.ministry-card{
+  transition: transform .3s, box-shadow .3s;
+  cursor:pointer;
+  padding:20px;
+  border-radius:12px;
+  background:#111;
+}
+.ministry-card:hover{
+  transform: scale(1.05);
+  box-shadow:0 0 20px #0f0;
+}
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:9999;
+}
+.modal.open{
+  opacity:1; visibility:visible;
+}
+.modal-content{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:16px;
+  max-width:400px;
+  color:#fff;
+  box-shadow:0 0 25px #0f0;
+}
+</style>
+
+
+<style>
+/* Modal slide animation */
+@keyframes hrModalSlide {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.hr-modal.open .hr-modal-box {
+  animation: hrModalSlide .35s ease-out;
+}
+
+/* Icon pulse animation */
+@keyframes hrPulse {
+  0% { transform: scale(1); opacity: .9; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: .9; }
+}
+.hr-ministry-card:hover .material-symbols-outlined {
+  animation: hrPulse 0.6s ease-in-out;
+}
+</style>
+
 </head>
 
 <body class="font-display text-text-light bg-background-dark">
@@ -1534,42 +1718,50 @@
                     <span class="material-symbols-outlined text-primary">groups</span>
                     Nuestros Ministerios
                 </h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-text-light">
-                    
-                    <a href="#URL_MINISTERIO_ALABANZA" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-text-light hr-ministries-grid">
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-alabanza" tabindex="0">
                         <span class="material-symbols-outlined text-primary">music_note</span>
                         <span class="text-sm font-medium">Ministerio de Alabanza</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_JOVENES" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary">face_6</span>
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-jovenes" tabindex="0">
+                        <span class="material-symbols-outlined text-primary">groups</span>
                         <span class="text-sm font-medium">Ministerio de Jóvenes</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_PREJOVENES" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-prejovenes" tabindex="0">
                         <span class="material-symbols-outlined text-primary">child_care</span>
                         <span class="text-sm font-medium">Ministerio de Pre-Jóvenes</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_CABALLEROS" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-caballeros" tabindex="0">
                         <span class="material-symbols-outlined text-primary">man</span>
                         <span class="text-sm font-medium">Ministerio de Caballeros</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_DAMAS" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-damas" tabindex="0">
                         <span class="material-symbols-outlined text-primary">woman</span>
                         <span class="text-sm font-medium">Ministerio de Damas</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_UJIERES" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-ujieres" tabindex="0">
                         <span class="material-symbols-outlined text-primary">vpn_key</span>
                         <span class="text-sm font-medium">Ministerio de Ujieres</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_NINOS" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-ninos" tabindex="0">
                         <span class="material-symbols-outlined text-primary">school</span>
                         <span class="text-sm font-medium">Ministerio de Niños</span>
-                    </a>
-                    <a href="#URL_MINISTERIO_EVANGELISMO" class="block bg-background-dark p-3 rounded-lg flex items-center gap-2 shadow-md border-b-2 border-secondary hover:bg-secondary/20 transition-colors">
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-evangelismo" tabindex="0">
                         <span class="material-symbols-outlined text-primary">campaign</span>
                         <span class="text-sm font-medium">Ministerio de Evangelismo</span>
-                    </a>
                     </div>
-            </div>
+
+                </div>
+
 
             <div id="misiones" class="bg-background-light p-8 rounded-xl shadow-2xl border-t-4 border-primary backdrop-blur-sm">
                 <h2 class="text-3xl font-bold text-text-light mb-4 flex items-center gap-2">
@@ -2049,54 +2241,170 @@
 </script>
 <!-- ======= FIN BOTÓN INSTALAR ======= -->
 
+
+<script>
+// Modal handling
+document.querySelectorAll('.ministry-card').forEach(card=>{
+  card.addEventListener('click', ()=>{
+    const id = card.getAttribute('data-modal');
+    const modal = document.getElementById(id);
+    if(modal) modal.classList.add('open');
+  });
+});
+document.querySelectorAll('.modal').forEach(modal=>{
+  modal.addEventListener('click', e=>{
+    if(e.target.classList.contains('modal')) modal.classList.remove('open');
+  });
+});
+</script>
+
+
+<!-- HR MINISTRIES MODALS -->
+<div id="hr-modal-alabanza" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box" role="document">
+    <button class="hr-close-btn" aria-label="Close" onclick="closeHrModal('hr-modal-alabanza')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%2300a651'/><text x='50%' y='55%' font-size='120' font-family='Arial' fill='white' text-anchor='middle'>JP</text></svg>" alt="Líder Alabanza">
+      <div>
+        <h3>Ministerio de Alabanza — Pr. Juan Pérez</h3>
+        <div class="hr-meta">Coordinador de Adoración</div>
+        <div class="hr-meta">Dirección: 123 Harmony St, West Columbia, SC</div>
+      </div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0101</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Célula de Alabanza — Jueves, 7:30 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550101" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-jovenes" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-jovenes')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23007ACC'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>AR</text></svg>" alt="Líder Jóvenes">
+      <div><h3>Ministerio de Jóvenes — Lcdo. Andrés Rodríguez</h3><div class="hr-meta">Coordinador de Jóvenes</div><div class="hr-meta">Dirección: 45 Youth Ave, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0202</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Generación Joven — Domingos, 6:00 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550202" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-prejovenes" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-prejovenes')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23FF7A59'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>ML</text></svg>" alt="Líder Pre-Jóvenes">
+      <div><h3>Ministerio de Pre-Jóvenes — Srta. María López</h3><div class="hr-meta">Coordinadora de Pre-Jóvenes</div><div class="hr-meta">Dirección: 77 Little St, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0303</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">No</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550303" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-caballeros" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-caballeros')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23004D40'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>RC</text></svg>" alt="Líder Caballeros">
+      <div><h3>Ministerio de Caballeros — Hno. Rafael Castillo</h3><div class="hr-meta">Coordinador</div><div class="hr-meta">Dirección: 200 Men St, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0404</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Caballeros en Acción — Sábados, 8:00 AM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550404" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-damas" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-damas')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23C2185B'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>MR</text></svg>" alt="Líder Damas">
+      <div><h3>Ministerio de Damas — Sra. Marta Rivera</h3><div class="hr-meta">Líder de Damas</div><div class="hr-meta">Dirección: 88 Women Way, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0505</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Mujeres en Fe — Miércoles, 7:00 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550505" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-ujieres" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-ujieres')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%238B5CF6'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>AJ</text></svg>" alt="Líder Ujieres">
+      <div><h3>Ministerio de Ujieres — Hno. Ángel Jiménez</h3><div class="hr-meta">Coordinador de Ujieres</div><div class="hr-meta">Dirección: 12 Welcome Rd, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0606</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">No</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550606" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-ninos" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-ninos')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23FFB300'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>CL</text></svg>" alt="Líder Niños">
+      <div><h3>Ministerio de Niños — Lic. Carla López</h3><div class="hr-meta">Directora de Niños</div><div class="hr-meta">Dirección: 5 Little Church Ln, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0707</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Semillitas — Domingos, 11:00 AM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550707" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-evangelismo" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-evangelismo')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%' height='100%' fill='%23F06292'/><text x='50%' y='55%' font-size='110' font-family='Arial' fill='white' text-anchor='middle'>EV</text></svg>" alt="Líder Evangelismo">
+      <div><h3>Ministerio de Evangelismo — Pr. Elías Valdez</h3><div class="hr-meta">Coordinador de Evangelismo</div><div class="hr-meta">Dirección: 300 Outreach Blvd, West Columbia, SC</div></div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0808</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Evangelismo Local — Viernes, 6:30 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550808" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+<!-- END HR MINISTRIES MODALS -->
+
+
+<script>
+// Open/close handlers for HR ministries
+function openHrModal(id){
+  const m = document.getElementById(id);
+  if(!m) return;
+  m.classList.add('open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeHrModal(id){
+  const m = document.getElementById(id);
+  if(!m) return;
+  m.classList.remove('open');
+  m.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('.hr-ministry-card, .hr-ministry-card *').forEach(()=>{}); // noop to ensure DOM loaded
+  document.querySelectorAll('.hr-ministry-card').forEach(card=>{
+    const id = card.getAttribute('data-modal');
+    card.addEventListener('click', ()=> openHrModal(id));
+    card.addEventListener('keydown', (e)=> { if(e.key==='Enter' || e.key===' ') { e.preventDefault(); openHrModal(id); } });
+  });
+  // Close when clicking backdrop
+  document.querySelectorAll('.hr-modal').forEach(mod=>{
+    mod.addEventListener('click', (e)=>{
+      if(e.target === mod) closeHrModal(mod.id);
+    });
+  });
+});
+</script>
+
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
