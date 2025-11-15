@@ -67,42 +67,6 @@
   color:#fff;
   box-shadow:0 0 25px #0f0;
 }
-
-/* AJUSTES PARA CELULAR — MODALES Y TEXTOS MÁS GRANDES */
-@media (max-width: 640px) {
-
-  .hr-modal .hr-photo {
-      width: 150px !important;
-      height: 150px !important;
-  }
-
-  .hr-modal h3 {
-      font-size: 1.4rem !important;
-      text-align: center !important;
-  }
-
-  .hr-modal .hr-label {
-      width: 100% !important;
-      font-size: 1.2rem !important;
-      text-align: left !important;
-  }
-
-  .hr-modal .hr-value {
-      font-size: 1.2rem !important;
-      line-height: 1.45 !important;
-  }
-
-  .hr-modal .hr-field {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-  }
-
-  .hr-modal .hr-head {
-      flex-direction: column !important;
-      text-align: center !important;
-  }
-}
-
 </style>
 
 
@@ -1924,17 +1888,7 @@
                                 style='background-image: url("IMAGEN_NOTICIA_1.jpg");'
                             ></div>
 
-                    <div class="p-5">
-                                <p class="text-secondary text-sm font-medium">CULTO</p>
-                                <p
-                                    class="text-text-light text-lg font-bold mt-1 group-hover:text-primary transition-colors"
-                                >
-                                   Oracion Todos los Martes
-                                </p>
-                                <p class="text-text-dark text-sm mt-1">
-                                    "Orad sin cesar para que no entréis en tentación" Mateo 26:41.
-                                </p>
-                            </div>
+                    
                         </a>
                     </div>
                     <div
@@ -1945,17 +1899,7 @@
                                 class="w-full h-40 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
                                 style='background-image: url("IMAGEN_NOTICIA_2.jpg");'
                             ></div>
-                            <div class="p-5">
-                                <p class="text-secondary text-sm font-medium">EVENTO</p>
-                                <p
-                                    class="text-text-light text-lg font-bold mt-1 group-hover:text-primary transition-colors"
-                                >
-                                   CULTO ESPECIAL
-                                </p>
-                                <p class="text-text-dark text-sm mt-2">
-                                   GRAN CAMPAÑA EVANGELISTICA JUVENIL!".
-                                </p>
-                            </div>
+                            
                         </a>
                     </div>
                     <div
@@ -1966,17 +1910,7 @@
                                 class="w-full h-40 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
                                 style='background-image: url("IMAGEN_NOTICIA_3.jpg")'
                             ></div>
-                            <div class="p-5">
-                                <p class="text-secondary text-sm font-medium">CULTO DIA VIERNES</p>
-                                <p
-                                    class="text-text-light text-lg font-bold mt-1 group-hover:text-primary transition-colors"
-                                >
-                                    CULTO DE DAMAS
-                                </p>
-                                <p class="text-text-dark text-sm mt-2">
-                                    mujer que se basa en la fe y la dependencia de Dios para edificar su hogar, ser sabia en sus decisiones y enfrentar desafíos con valentía..
-                                </p>
-                            </div>
+                            
                         </a>
                     </div>
                 </div>
@@ -2337,7 +2271,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-jovenes')">&times;</button>
     <div class="hr-head">
     <img class="hr-photo" src="lider_jovenes.jpg" alt="Líder Jóvenes">    
-        <div><h3>Ministerio de Jóvenes — HNO. SURIEL Y ONADIS VASQUEZ </h3><div class="hr-meta">Coordinador de Jóvenes</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+        <div><h3>Ministerio de Jóvenes — Hno. SURIEL Y ONADIS VASQUEZ </h3><div class="hr-meta">Coordinador de Jóvenes</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (839) 224-4925</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Generación Joven —  Miércoles, 8:00 PM </div></div>
@@ -2350,7 +2284,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-prejovenes')">&times;</button>
     <div class="hr-head">
     <img class="hr-photo" src="lider_prejovenes.jpg" alt="Líder Pre-Jóvenes">       
-    <div><h3>Ministerio de Pre-Jóvenes — HNO.LEONARDO Y MADELINE OSOY</h3><div class="hr-meta">Coordinadora de Pre-Jóvenes</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+    <div><h3>Ministerio de Pre-Jóvenes — Hno.LEONARDO Y MADELINE OSOY</h3><div class="hr-meta">Coordinadora de Pre-Jóvenes</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 922-5417</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Estudio Bíblico — Miércoles, 8:00 PM</div></div>
@@ -2363,7 +2297,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-caballeros')">&times;</button>
     <div class="hr-head">
       <img class="hr-photo" src="lider_caballeros.jpg" alt="Líder Caballeros">
-      <div><h3>Ministerio de Caballeros — HNO. IRVIN MARRROQUIN</h3><div class="hr-meta">Coordinador</div><div class="hr-meta">Dirección: 200 Men St, West Columbia, SC</div></div>
+      <div><h3>Ministerio de Caballeros — Hno. IRVIN MARRROQUIN</h3><div class="hr-meta">Coordinador</div><div class="hr-meta">Dirección: 200 Men St, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 888-9553</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Caballeros en Acción — Sábados, 8:00 AM</div></div>
@@ -2375,9 +2309,9 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-damas')">&times;</button>
     <div class="hr-head">
      <img class="hr-photo" src="lider_damas.jpg" alt="Líder Damas">
-      <div><h3>Ministerio de Damas — HNA. ROXANA RATHAN</h3><div class="hr-meta">Líder de Damas</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+      <div><h3>Ministerio de Damas — Hna. ROXANA RATHAN</h3><div class="hr-meta">Líder de Damas</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
-    <div class="hr-field"><div class="hr-label">Teléfono:</div>
+    <div class="hr-field"><div class="hr-label">Teléfono:     (803) 555-0505</div>
 <div class="hr-value">+1 (803) 555-0505</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Estudio Bíblico — Miércoles, 8:00 PM</div></div>
     <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550505" target="_blank">💬 WhatsApp</a></div>
@@ -2389,7 +2323,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-ujieres')">&times;</button>
     <div class="hr-head">
      <img class="hr-photo" src="lider_ujieres.jpg" alt="Líder Ujieres">
-      <div><h3>Ministerio de Ujieres — HNO. SILVERIO VELÁZQUEZ</h3><div class="hr-meta">Coordinador de Ujieres</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+      <div><h3>Ministerio de Ujieres — Hno. SILVERIO VELÁSQUEZ</h3><div class="hr-meta">Coordinador de Ujieres</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 626-5485</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Estudio Bíblico — Miércoles, 8:00 PM</div></div>
@@ -2402,7 +2336,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-ninos')">&times;</button>
     <div class="hr-head">
       <img class="hr-photo" src="lider_niños.jpg" alt="Líder Niños">
-      <div><h3>Ministerio de Niños — HNA.ROSSY AYALA</h3><div class="hr-meta">Directora de Niños</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+      <div><h3>Ministerio de Niños — Hna.ROSSY AYALA</h3><div class="hr-meta">Directora de Niños</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 262-9065</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Semillitas — Domingos, 10:00 AM Y 1:00 PM</div></div>
@@ -2415,7 +2349,7 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-evangelismo')">&times;</button>
     <div class="hr-head">
       <img class="hr-photo" src="lider_evangelismo.jpg" alt="Líder Evangelismo">
-      <div><h3>Ministerio de Evangelismo — HNO. VENTURA HUIX</h3><div class="hr-meta">Coordinador de Evangelismo</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
+      <div><h3>Ministerio de Evangelismo — Hno. VENTURA HUIX</h3><div class="hr-meta">Coordinador de Evangelismo</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
     <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 638-3665</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Evangelismo  — Viernes, 8:00 PM</div></div>
@@ -2579,79 +2513,27 @@ setInterval(updateMR,3000);
 })();
 </script>
 
+
+<!-- CARRUSEL NOTICIAS -->
+<section id="noticias" class="noticias-section">
+  <h2 class="section-title">📰 Noticias Recientes</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="noticia1.jpg"></div>
+      <div class="carousel-item"><img src="noticia2.jpg"></div>
+      <div class="carousel-item"><img src="noticia3.jpg"></div>
+    </div>
+  </div>
+
+  <div id="carousel-modal" class="carousel-modal" onclick="closeCarouselModal()">
+    <img id="carousel-modal-img" src="">
+  </div>
+</section>
+
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
